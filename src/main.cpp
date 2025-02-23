@@ -18,23 +18,25 @@ struct Token{
 };
 
 
-std::vector<Token> tokenize(const std::string& str){
-    std::vector<Token> tokens; 
+std::vector<Token> tokenize(const std::string& str) {
+    std::vector<Token> tokens;
     std::string buf;
-    for (int i =0; i<str.length(); i++){
-        // std::cout << c << std::endl;
+
+    for (int i = 0; i < str.length(); i++) {
+        if (i >= str.length()) break;  // Prevent out of range
+
         char c = str.at(i);
-        if(std::isalpha(c)) {
+        
+        if (std::isalpha(c)) {
             buf.push_back(c);
             i++;
-            while (std::isalnum(str.at(i))) {
+            while (i < str.length() && std::isalnum(str.at(i))) {  // Add check for bounds here
                 buf.push_back(str.at(i));
                 i++;
             }
             i--;
 
-
-            if(buf == "return"){
+            if (buf == "return") {
                 tokens.push_back({.type = TokenType::_return});
                 buf.clear();
                 continue;
@@ -45,19 +47,17 @@ std::vector<Token> tokenize(const std::string& str){
         }
         else if (std::isdigit(c)) {
             buf.push_back(c);
-            i++;
-            while (std::isdigit(str.at(c))) {
-                buf.push_back(str.at(c));
+            while (i + 1 < str.length() && std::isdigit(str.at(i + 1))) {  // Check bounds here as well
                 i++;
+                buf.push_back(str.at(i));
             }
-            i--;
             tokens.push_back({.type = TokenType::int_lit, .value = buf});
             buf.clear();
         }
-        else if (c == ';'){
+        else if (c == ';') {
             tokens.push_back({.type = TokenType::semi});
         }
-        else if(std::isspace(c)) {
+        else if (std::isspace(c)) {
             continue;
         } else {
             std::cerr << "You F** up!" << std::endl;
@@ -66,6 +66,26 @@ std::vector<Token> tokenize(const std::string& str){
     }
 
     return tokens;
+}
+
+
+std::string tokens_to_asm(const std::vector<Token>& tokens){
+    std::stringstream output;
+    output << "global _start\n_start:\n";
+    for (int i =0; i<tokens.size(); i++) {
+        const Token& token = tokens.at(i);
+        if(token.type == TokenType::_return){
+            if (i+1 < tokens.size() && tokens.at(i+1).type == TokenType::int_lit){
+                if (i+2 < tokens.size() && tokens.at(i+2).type == TokenType::semi){
+                    output << "    mov rax, 60\n";
+                    output << "    mov rdi, " << tokens.at(i+1).value.value() << "\n";
+                    output << "    syscall";
+
+                }
+            }
+        }
+    }
+    return output.str();
 }
 
 
@@ -99,5 +119,10 @@ int main(int argc, char* argv[]){
 
 
     std::vector<Token> tokens = tokenize(contents);
+    {
+        std::fstream file("./out.asm", std::ios::out);
+        file << tokens_to_asm(tokens); 
+    }
+
     return EXIT_SUCCESS;
 }
