@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/com.dir/src/main.cpp.o -o com 

@@ -1,0 +1,3 @@
+/home/souvik/Compiler_from_scratch/build/CMakeFiles/com.dir
+/home/souvik/Compiler_from_scratch/build/CMakeFiles/edit_cache.dir
+/home/souvik/Compiler_from_scratch/build/CMakeFiles/rebuild_cache.dir
