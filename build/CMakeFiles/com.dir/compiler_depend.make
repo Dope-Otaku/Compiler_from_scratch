@@ -20,6 +20,7 @@ CMakeFiles/com.dir/src/main.cpp.o: /home/souvik/Compiler_from_scratch/src/main.c
   /usr/include/c++/13/bits/cpp_type_traits.h \
   /usr/include/c++/13/bits/cxxabi_forced.h \
   /usr/include/c++/13/bits/cxxabi_init_exception.h \
+  /usr/include/c++/13/bits/enable_special_members.h \
   /usr/include/c++/13/bits/exception.h \
   /usr/include/c++/13/bits/exception_defines.h \
   /usr/include/c++/13/bits/exception_ptr.h \
@@ -56,12 +57,15 @@ CMakeFiles/com.dir/src/main.cpp.o: /home/souvik/Compiler_from_scratch/src/main.c
   /usr/include/c++/13/bits/sstream.tcc \
   /usr/include/c++/13/bits/std_abs.h \
   /usr/include/c++/13/bits/stl_algobase.h \
+  /usr/include/c++/13/bits/stl_bvector.h \
   /usr/include/c++/13/bits/stl_construct.h \
   /usr/include/c++/13/bits/stl_function.h \
   /usr/include/c++/13/bits/stl_iterator.h \
   /usr/include/c++/13/bits/stl_iterator_base_funcs.h \
   /usr/include/c++/13/bits/stl_iterator_base_types.h \
   /usr/include/c++/13/bits/stl_pair.h \
+  /usr/include/c++/13/bits/stl_uninitialized.h \
+  /usr/include/c++/13/bits/stl_vector.h \
   /usr/include/c++/13/bits/streambuf.tcc \
   /usr/include/c++/13/bits/streambuf_iterator.h \
   /usr/include/c++/13/bits/string_view.tcc \
@@ -69,6 +73,7 @@ CMakeFiles/com.dir/src/main.cpp.o: /home/souvik/Compiler_from_scratch/src/main.c
   /usr/include/c++/13/bits/uses_allocator.h \
   /usr/include/c++/13/bits/uses_allocator_args.h \
   /usr/include/c++/13/bits/utility.h \
+  /usr/include/c++/13/bits/vector.tcc \
   /usr/include/c++/13/cctype \
   /usr/include/c++/13/cerrno \
   /usr/include/c++/13/clocale \
@@ -95,6 +100,7 @@ CMakeFiles/com.dir/src/main.cpp.o: /home/souvik/Compiler_from_scratch/src/main.c
   /usr/include/c++/13/istream \
   /usr/include/c++/13/new \
   /usr/include/c++/13/numbers \
+  /usr/include/c++/13/optional \
   /usr/include/c++/13/ostream \
   /usr/include/c++/13/pstl/pstl_config.h \
   /usr/include/c++/13/sstream \
@@ -106,6 +112,7 @@ CMakeFiles/com.dir/src/main.cpp.o: /home/souvik/Compiler_from_scratch/src/main.c
   /usr/include/c++/13/tuple \
   /usr/include/c++/13/type_traits \
   /usr/include/c++/13/typeinfo \
+  /usr/include/c++/13/vector \
   /usr/include/ctype.h \
   /usr/include/endian.h \
   /usr/include/errno.h \
@@ -294,9 +301,19 @@ CMakeFiles/com.dir/src/main.cpp.o: /home/souvik/Compiler_from_scratch/src/main.c
 
 /usr/include/x86_64-linux-gnu/bits/floatn-common.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h:
+/usr/include/x86_64-linux-gnu/gnu/stubs.h:
 
-/usr/include/c++/13/compare:
+/usr/include/x86_64-linux-gnu/bits/endian.h:
+
+/usr/include/x86_64-linux-gnu/bits/cpu-set.h:
+
+/usr/include/x86_64-linux-gnu/bits/byteswap.h:
+
+/usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
+
+/usr/include/x86_64-linux-gnu/asm/errno.h:
 
 /usr/include/c++/13/bits/stl_construct.h:
 
@@ -316,15 +333,17 @@ CMakeFiles/com.dir/src/main.cpp.o: /home/souvik/Compiler_from_scratch/src/main.c
 
 /usr/include/c++/13/bits/ostream_insert.h:
 
-/usr/include/x86_64-linux-gnu/bits/cpu-set.h:
-
 /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
 
 /usr/include/c++/13/cstddef:
 
+/usr/include/c++/13/vector:
+
 /usr/include/c++/13/bits/invoke.h:
 
 /usr/include/c++/13/bits/locale_classes.tcc:
+
+/usr/include/c++/13/bits/stl_bvector.h:
 
 /usr/include/c++/13/bits/allocator.h:
 
@@ -340,15 +359,11 @@ CMakeFiles/com.dir/src/main.cpp.o: /home/souvik/Compiler_from_scratch/src/main.c
 
 /usr/include/c++/13/bits/codecvt.h:
 
+/usr/include/c++/13/bits/stl_vector.h:
+
 /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h:
 
 /usr/include/c++/13/bits/ios_base.h:
-
-/usr/include/c++/13/bits/move.h:
-
-/usr/include/x86_64-linux-gnu/sys/single_threaded.h:
-
-/usr/include/c++/13/type_traits:
 
 /usr/include/c++/13/bits/locale_facets.tcc:
 
@@ -372,10 +387,6 @@ CMakeFiles/com.dir/src/main.cpp.o: /home/souvik/Compiler_from_scratch/src/main.c
 
 /usr/include/c++/13/iosfwd:
 
-/usr/include/c++/13/bits/stl_iterator_base_funcs.h:
-
-/usr/include/asm-generic/errno.h:
-
 /usr/include/c++/13/cwchar:
 
 /usr/include/x86_64-linux-gnu/bits/time64.h:
@@ -394,9 +405,17 @@ CMakeFiles/com.dir/src/main.cpp.o: /home/souvik/Compiler_from_scratch/src/main.c
 
 /usr/include/alloca.h:
 
-/usr/include/c++/13/bit:
+/usr/include/c++/13/bits/move.h:
 
 /usr/include/c++/13/bits/basic_string.tcc:
+
+/usr/include/c++/13/bit:
+
+/usr/include/x86_64-linux-gnu/sys/single_threaded.h:
+
+/usr/include/c++/13/type_traits:
+
+/usr/include/c++/13/bits/enable_special_members.h:
 
 /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h:
 
@@ -415,18 +434,6 @@ CMakeFiles/com.dir/src/main.cpp.o: /home/souvik/Compiler_from_scratch/src/main.c
 /home/souvik/Compiler_from_scratch/src/main.cpp:
 
 /usr/include/c++/13/ios:
-
-/usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
-
-/usr/include/c++/13/bits/functexcept.h:
-
-/usr/include/c++/13/bits/stl_iterator.h:
-
-/usr/include/c++/13/bits/ostream.tcc:
-
-/usr/include/c++/13/numbers:
-
-/usr/include/c++/13/string:
 
 /usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
 
@@ -454,10 +461,6 @@ CMakeFiles/com.dir/src/main.cpp.o: /home/souvik/Compiler_from_scratch/src/main.c
 
 /usr/include/c++/13/bits/cxxabi_forced.h:
 
-/usr/include/c++/13/bits/istream.tcc:
-
-/usr/include/c++/13/bits/exception_ptr.h:
-
 /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h:
 
 /usr/include/c++/13/cerrno:
@@ -476,9 +479,41 @@ CMakeFiles/com.dir/src/main.cpp.o: /home/souvik/Compiler_from_scratch/src/main.c
 
 /usr/include/features-time64.h:
 
+/usr/include/x86_64-linux-gnu/bits/endianness.h:
+
+/usr/include/c++/13/bits/basic_string.h:
+
 /usr/include/stdc-predef.h:
 
+/usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
+
+/usr/include/c++/13/bits/functexcept.h:
+
+/usr/include/c++/13/bits/stl_iterator.h:
+
+/usr/include/c++/13/bits/ostream.tcc:
+
+/usr/include/c++/13/numbers:
+
+/usr/include/c++/13/string:
+
+/usr/include/asm-generic/errno.h:
+
+/usr/include/c++/13/bits/stl_iterator_base_funcs.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h:
+
+/usr/include/c++/13/compare:
+
 /usr/include/c++/13/bits/stl_iterator_base_types.h:
+
+/usr/include/c++/13/bits/stl_uninitialized.h:
+
+/usr/include/c++/13/bits/istream.tcc:
+
+/usr/include/c++/13/bits/exception_ptr.h:
+
+/usr/include/c++/13/optional:
 
 /usr/include/c++/13/bits/std_abs.h:
 
@@ -495,6 +530,8 @@ CMakeFiles/com.dir/src/main.cpp.o: /home/souvik/Compiler_from_scratch/src/main.c
 /usr/include/c++/13/bits/stl_function.h:
 
 /usr/include/c++/13/bits/utility.h:
+
+/usr/include/c++/13/bits/vector.tcc:
 
 /usr/include/c++/13/clocale:
 
@@ -584,24 +621,8 @@ CMakeFiles/com.dir/src/main.cpp.o: /home/souvik/Compiler_from_scratch/src/main.c
 
 /usr/include/stdlib.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
-
-/usr/include/x86_64-linux-gnu/asm/errno.h:
-
-/usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h:
-
-/usr/include/x86_64-linux-gnu/bits/byteswap.h:
-
-/usr/include/x86_64-linux-gnu/gnu/stubs.h:
-
-/usr/include/x86_64-linux-gnu/bits/endian.h:
-
-/usr/include/c++/13/bits/basic_string.h:
-
-/usr/include/x86_64-linux-gnu/bits/endianness.h:
+/usr/include/x86_64-linux-gnu/bits/errno.h:
 
 /usr/include/c++/13/exception:
 
 /usr/include/wctype.h:
-
-/usr/include/x86_64-linux-gnu/bits/errno.h:
